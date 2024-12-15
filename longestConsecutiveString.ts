@@ -26,14 +26,16 @@
 function longestConsec(strarr: string[], k: number): string {
     if (strarr.length === 0 || k > strarr.length || k <= 0) return ''
 
-    const strObj: object[] = []
-    for (let i = 0; i < strarr.length; i++) {
-        strObj[i] = {
-            [i]: strarr[i]
-        }
-    } console.log(strObj);
+    let longestStr = ''
 
-    return ''
+    for (let i = 0; i < strarr.length; i++) {
+        let currentStr = strarr.slice(i, i + k).join('')
+        if (currentStr.length > longestStr.length) {
+            longestStr = currentStr
+        }
+    }
+
+    return longestStr
 }
 
 
