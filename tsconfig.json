@@ -1,12 +1,12 @@
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "lib": ["es2016", "dom"],
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["checkIfPalindrome.ts"]
+    "compilerOptions": {
+        "target": "es2016",
+        "lib": ["es2016", "dom"],
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["convertStrToPigLatin.ts"]
 }
