@@ -32,16 +32,10 @@ function findPrimeFactors(num: number): number[] {
     return PRIME_INTEGERS.filter((n) => checkIfDivisibleBy(num, n));
 }
 
-console.log(findPrimeFactors(15)); // 3, 5
-console.log(findPrimeFactors(20)); // 2, 5
-console.log(findPrimeFactors(25)); // 5
-console.log(findPrimeFactors(13)); // 0
-console.log(findPrimeFactors(-11)); // 0
-
 function sumOfDivided(lst: number[]): number[][] {
-    // for each num in list[]
-    // establish which prime factors apply (which ints the num can be divided by)
-    // store these ints somewhere
+    const primeFactors = lst.map(findPrimeFactors);
+
+    console.log(primeFactors);
 
     // create a finalArr
     // for each int, create a newArr like this [int, 0]
@@ -54,14 +48,14 @@ function sumOfDivided(lst: number[]): number[][] {
     return [];
 }
 
-// console.log(sumOfDivided([12, 15])); // [ [2, 12], [3, 27], [5, 15] ]
-// console.log(sumOfDivided([15, 21, 24, 30, 45])); // [ [2, 54], [3, 135], [5, 90], [7, 21] ]
+console.log(sumOfDivided([12, 15])); // [ [2, 12], [3, 27], [5, 15] ]
+console.log(sumOfDivided([15, 21, 24, 30, 45])); // [ [2, 54], [3, 135], [5, 90], [7, 21] ]
 
-// // Simple positive numbers test case
-// console.log(sumOfDivided([4, 6])); // [[2, 10], [3, 6]]
+// Simple positive numbers test case
+console.log(sumOfDivided([4, 6])); // [[2, 10], [3, 6]]
 
-// // Test case with negative numbers
-// console.log(sumOfDivided([15, -30])); // [[2, -30], [3, -15], [5, -15]]
+// Test case with negative numbers
+console.log(sumOfDivided([15, -30])); // [[2, -30], [3, -15], [5, -15]]
 
-// // Test case where sums become zero
-// console.log(sumOfDivided([15, -15])); // [[3, 0], [5, 0]]
+// Test case where sums become zero
+console.log(sumOfDivided([15, -15])); // [[3, 0], [5, 0]]
